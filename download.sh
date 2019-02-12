@@ -7,7 +7,7 @@ if [ $# -eq 0 ] || [ "$1" == "-?" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ]
     exit 1
 fi
 
-[ "$4" ] || local_folder='./${3}'
+[ "$4" ] || local_folder=./"${3}"
 
 # set git pw storing to 1 hour (supported only git-1.7.9 and later)
 git config --global credential.helper cache
