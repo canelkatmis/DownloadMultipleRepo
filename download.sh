@@ -12,6 +12,8 @@ fi
 # set git pw storing to 1 hour (supported only git-1.7.9 and later)
 git config --global credential.helper cache
 git config --global credential.helper "cache --timeout=3600"
+# set git buffer for large sized repos
+git config --global http.postBuffer 524288000
 
 curl -u ${2} http://${1}/rest/api/1.0/projects/${3}/repos?limit=100 > repos.json
 
